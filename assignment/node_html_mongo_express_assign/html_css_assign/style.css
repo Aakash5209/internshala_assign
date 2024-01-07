@@ -1,0 +1,115 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 900px;
+    /*margin: top- bottom  left-right;  */
+    margin: 0 auto;
+}
+body{
+    background-color: rgb(252, 203, 168);
+}
+.apply_box{
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgb(240, 197, 247);
+    /* for centre margin: 0 auto;  */
+    margin:0 auto;
+    margin-top: 50px;
+    /* box-shadow: x y z rgb; */
+    box-shadow: 4px 3px 5px gray;
+    border-radius: 20px;
+    
+}
+
+
+.title_small{
+    font-size: 20px;
+    font-weight: bold;
+}
+/* now first we  will align all these field for that we will use the grid  */
+.form_container{
+    margin-top: 20px;
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+ gap:20px;
+}
+/* now we will solve the adrees field issue and make all field 
+more align for that we will use Flex */
+/* each form_control contain two feild 1- label , 2- input so 
+with the help of flex we will allign thse field*/
+.form_control{
+    display: flex;
+    flex-direction: column;
+    gap:5px ;
+    
+}
+label{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+/*  now we will provide the design to all the input */
+input, select, textarea{
+    padding: 6px 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    font: 15px;
+}
+/* now we chnage the colour of the focus */
+input:focus{
+    outline-color: rgb(240, 118, 199);
+}
+/* btn is present inside div so we can select it by targeting its class */
+.btn{
+    margin-top: 20px;
+    display: flex;
+    /* here we will use jutify_content instead of float:right; so btn can shift into right side  */
+    justify-content: flex-end;
+
+}
+/* now fix the button layout */
+button{
+    background-color: hsl(0, 96%, 50%);
+    border: 2px solid transparent;
+    padding: 5px 10px;
+    color: aliceblue;
+    border-radius: 8px;
+    transition: 1s ease-in;
+
+}
+/* now we will use hover effect for that first select the button */
+button:hover{
+    background-color: hsl(0, 83%, 81%);
+    color: black;
+    font-weight: bold;
+    /* as btn change its color instantly during hovering so now to
+     slow dopwn its time we will use transition first provide ease-in 
+     to the button and thyen ease-ouyt to the during hovering button*/
+    transition: 1s ease-out;
+    /* changingf the type of the cursor */
+    cursor: pointer;
+
+}
+.text_area_control{
+    /* now we will provide two grid's spacing to the address field */
+    grid-column: 1/span 2;
+}
+/* now we will set the input of address ie; textarea  for that first we will select it */
+.text_area_control textarea{
+    width: 100%;
+    margin-top: 10px;
+}
+/* now bcz of text_area_control our web page is
+ not visible clearly in mobile so for that we will use media query */
+ /* now here we will set that when our width is less that 
+ 500px then it will take only one column to display the web page instead of two */
+@media(max-width:460px)
+{
+    .text_area_control{
+        /* so underwidth- 460px our grid column will take only 1 instead of 2 column   */
+        grid-column: 1/span 1;
+
+    }
+}

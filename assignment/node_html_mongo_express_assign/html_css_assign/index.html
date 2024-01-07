@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job_application</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <div class="container">
+        <div class="apply_box">
+            <h1>Job Application  
+            <span class="title_small">(Web)</span>
+            </h1>
+            <form action="">
+                <div class="form_container">
+                    <div class="form_control">
+                        <!-- in label  there is FOR in which we pass the id of the input 
+                        so when we click on the label then we get the cursor in the text field -->
+                        <label for="first_name">First Name</label>
+                        <input id="first_name" name="first_name" placeholder="Enter your name">
+
+                    </div>
+                    <div class="form_control">
+                        <label for=" last_name"> Last Name</label>
+                        <input id=" last_name" name=" last_name" placeholder="Enter last name">
+
+                    </div>
+                    <div class="form_control">
+                        <!-- in label  there is FOR in which we pass the id of the input 
+                        so when we click on the label then we get the cursor in the text field -->
+                        <label for="email">Email</label>
+                        <input id="email" type="email" name="email" placeholder="Enter your email">
+
+                    </div>
+                    <div class="form_control">
+                       <label for="job_role">Job Role</label>
+                       <select
+                        name="job_role" id="job_role">
+                        <option value="">Select Job Role</option>
+                        <option value="frontend">Frontend Developer</option>
+                        <option value="backend">Backend Developer</option>
+                        <option value="full_stack">Full Stack Developer</option>
+                        <option value="ui_ux">UI UX Designer</option>   
+                        </select>
+                    </div>
+                    <!-- here we will change the class of address bcz we want to provide
+                     it some differnt looks as compare to other field -->
+                    <div class="text_area_control">
+                        <!-- in label  there is FOR in which we pass the id of the input 
+                        so when we click on the label then we get the cursor in the text field -->
+                        <label for="address"> Address</label>
+                        <textarea name="adress" id="address" cols="40" rows="4">Enter Your Permanent Address</textarea>
+
+                    </div>
+                    <div class="form_control">
+                        <label for=" city"> City </label>
+                        <input id=" city" name=" city" placeholder="City name">
+
+                    </div>
+                    <div class="form_control">
+                        <label for=" pin_code"> Pin Code</label>
+                        <input 
+                        id=" pin_code"
+                        type="number" 
+                        name=" pin_code" 
+                        placeholder="Enter Pin Code">
+
+                    </div>
+                    <div class="form_control">
+                        <label for=" date">Date</label>
+                         <!-- providing default value -->
+                        <input 
+                        value="2023-01-10"
+                        id=" date"
+                        type="date" 
+                        name=" date" >
+                    </div>
+                    <div class="form_control">
+                        <label for=" pin_code">Upload Cv</label>
+                         <!-- for upload file type should be file -->
+                        <input  
+                        id=" upload"
+                        type="file" 
+                        name=" upload" >
+                    </div>
+                 </div>
+                 <!-- Now we will add butoon but it is outside from the form_container -->
+                 <div class="btn">
+                    <button type="submit"> Apply Now</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
